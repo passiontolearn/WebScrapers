@@ -26,7 +26,7 @@ def get_hidden_download_link(url):
 	download_form=rb.find_all("form")[1]	# the second form will have our download link
 	download_url=download_form.attrs['action']
 	print(download_url)
-    #  The url is expected to look this: http://software.oldversion.com/download.php?f=YTo1OntzOjQ...
+	#  The url is expected to look this: http://software.oldversion.com/download.php?f=YTo1OntzOjQ...
 	
 	'''  Get the *real* filename of the download from the Content-Disposition HTTP header
 		 Thanks to: https://stackoverflow.com/a/37060758
