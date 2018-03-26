@@ -68,7 +68,7 @@ def fetch_hidden_download_link(url):
 	''' wget insisted on getting the filename from the HTTP headers, i.e.
 		wget.download(download_url, destFile_path)  # fails with IndexError: list index out of range
 
-		The SmartDL module on the hand... just works :)
+		The SmartDL module on the other hand... just works :)
 	'''
 	smart_dl = SmartDL(download_url, destFile_path, progress_bar=False)
 	smart_dl.start()
@@ -83,7 +83,7 @@ def main():
 	#
 	with open('urls.txt', 'r') as urls:
 		for url in urls:
-			### The hidden links should be downloadwd ASAP as they become expired within minutes...!
+			### The hidden links should be downloaded ASAP as they become expired within minutes...!
 			fetch_hidden_download_link( url.strip() )
 
 if __name__ == "__main__":
